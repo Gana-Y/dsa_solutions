@@ -1,5 +1,5 @@
 // Problem: Find GCD / HCF of two numbers
-// Category: Basic Maths
+// Type: Conceptual + Implementation / Basic Maths
 // Approach: Euclidean Algorithm
 // Time Complexity: O(log(min(a, b)))
 // Space Complexity: O(1)

@@ -1,6 +1,6 @@
 // Problem: Print all divisors of a number
-// Category: Basic Maths
-// Approach: Iterate till sqrt(n)
+// Type: Conceptual + Implementation / Basic Maths
+// Approach: Iterate till sqrt(n) and print divisor pairs
 // Time Complexity: O(sqrt(n))
 // Space Complexity: O(1)
 

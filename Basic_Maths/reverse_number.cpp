@@ -1,6 +1,6 @@
 // Problem: Reverse a number
-// Category: Basic Maths
-// Approach: Digit extraction
+// Type: Implementation / Basic Maths
+// Approach: Digit extraction using modulo and division
 // Time Complexity: O(log10(n))
 // Space Complexity: O(1)
 

@@ -1,6 +1,6 @@
 // Problem: Count number of digits in a number
-// Category: Basic Maths
-// Approach: Repeated division
+// Type: Implementation / Basic Maths
+// Approach: Repeated division by 10
 // Time Complexity: O(log10(n))
 // Space Complexity: O(1)
 

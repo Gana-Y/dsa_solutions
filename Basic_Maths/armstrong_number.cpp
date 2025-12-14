@@ -1,6 +1,6 @@
 // Problem: Check if a number is an Armstrong number
-// Category: Basic Maths
-// Approach: Count digits, sum of each digit raised to power of digits
+// Type: Conceptual + Implementation / Basic Maths
+// Approach: Count digits, then sum of each digit raised to power of digits
 // Time Complexity: O(d) where d = number of digits
 // Space Complexity: O(1)
 

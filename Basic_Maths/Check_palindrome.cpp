@@ -1,6 +1,6 @@
-// Problem: Check if a number is Palindrome
-// Category: Basic Maths
-// Approach: Reverse the number and compare
+// Problem: Check if a number is palindrome
+// Type: Implementation / Basic Maths
+// Approach: Reverse the number and compare with original
 // Time Complexity: O(log10(n))
 // Space Complexity: O(1)
 

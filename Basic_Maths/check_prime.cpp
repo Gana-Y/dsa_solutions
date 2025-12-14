@@ -1,6 +1,6 @@
-// Problem: Print all divisors of a number
-// Category: Basic Maths
-// Approach: Iterate till sqrt(n)
+// Problem: Check if a number is prime
+// Type: Conceptual + Implementation / Basic Maths
+// Approach: Check divisibility till sqrt(n)
 // Time Complexity: O(sqrt(n))
 // Space Complexity: O(1)
 
