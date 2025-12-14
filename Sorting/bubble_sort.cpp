@@ -7,6 +7,10 @@
 //   Worst Case: O(N^2)
 // Space Complexity: O(1)
 
+// Approach:
+// Repeatedly compare adjacent elements and swap them if they are in wrong order.
+// After each pass, the largest element moves to the end of the array.
+
 #include <bits/stdc++.h>
 using namespace std;
 
