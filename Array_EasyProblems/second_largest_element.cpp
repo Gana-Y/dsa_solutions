@@ -1,8 +1,20 @@
+/*
+    Program: Second Largest Element in an Array (Without Sorting)
+
+    Time Complexity:
+    - O(n), because the array is traversed exactly once.
+
+    Space Complexity:
+    - O(1), because only two extra variables are used
+      (largest and second_largest), regardless of input size.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
 int getSecondLargest(vector<int> &arr) {
     int n = arr.size();
+
+    // Edge case: array must have at least 2 elements
     if (n < 2) return -1;
 
     int largest = INT_MIN;
@@ -12,13 +24,17 @@ int getSecondLargest(vector<int> &arr) {
         if (arr[i] > largest) {
             second_largest = largest;
             largest = arr[i];
-        } 
+        }
         else if (arr[i] < largest && arr[i] > second_largest) {
             second_largest = arr[i];
         }
     }
 
-    return (second_largest == INT_MIN) ? -1 : second_largest;
+    // If second largest element does not exist
+    if (second_largest == INT_MIN)
+        return -1;
+
+    return second_largest;
 }
 
 int main() {
