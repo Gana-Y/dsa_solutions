@@ -1,6 +1,9 @@
 // Time Complexity: O(n) (optimal)
 // Space Complexity: O(1) extra space
+//when the input grows comparision also grows
 
+//input 5--> 4comparision
+//input 1000-->999 comparision.
 #include <bits/stdc++.h>
 using namespace std;
 
