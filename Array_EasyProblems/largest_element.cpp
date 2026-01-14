@@ -4,22 +4,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int n;
-    cin >> n;
-
-    vector<int> arr(n);
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-
-    int largest = arr[0];
-    for (int i = 1; i < n; i++) {
-        if (arr[i] > largest) {
-            largest = arr[i];
+// ---- LOGIC (this is what interviews test) ----
+int largest(vector<int>& arr) {
+    int mx = arr[0];
+    for (int i = 1; i < arr.size(); i++) {
+        if (arr[i] > mx) {
+            mx = arr[i];
         }
     }
+    return mx;
+}
 
-    cout << largest;
+// ---- TESTING ONLY ----
+int main() {
+    vector<int> arr = {1, 8, 7, 56, 90};
+    cout << largest(arr);
     return 0;
 }
