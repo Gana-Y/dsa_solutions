@@ -11,34 +11,47 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int getSecondLargest(vector<int> &arr) {
-    int n = arr.size();
-
-    // Edge case: array must have at least 2 elements
-    if (n < 2) return -1;
+int secondLargest(vector<int>& arr) {
+    // Edge case: if array has less than 2 elements
+    if (arr.size() < 2) {
+        return -1;  // no second largest
+    }
 
     int largest = INT_MIN;
-    int second_largest = INT_MIN;
+    int secondLargest = INT_MIN;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < arr.size(); i++) {
+
+        // Case 1: current element becomes the new largest
         if (arr[i] > largest) {
-            second_largest = largest;
+            secondLargest = largest;   // preserve old largest
             largest = arr[i];
         }
-        else if (arr[i] < largest && arr[i] > second_largest) {
-            second_largest = arr[i];
+        // Case 2: current element is between largest and secondLargest
+        else if (arr[i] < largest && arr[i] > secondLargest) {
+            secondLargest = arr[i];
         }
     }
 
-    // If second largest element does not exist
-    if (second_largest == INT_MIN)
+    // If secondLargest was never updated, it doesn't exist
+    if (secondLargest == INT_MIN) {
         return -1;
+    }
 
-    return second_largest;
+    return secondLargest;
 }
 
 int main() {
-    vector<int> arr = {12, 35, 1, 10, 34, 1};
-    cout << getSecondLargest(arr);
+    vector<int> arr = {10, 30, 40, 20};
+
+    int result = secondLargest(arr);
+
+    if (result == -1) {
+        cout << "Second largest element does not exist";
+    } else {
+        cout << "Second largest element is: " << result;
+    }
+
     return 0;
 }
+
