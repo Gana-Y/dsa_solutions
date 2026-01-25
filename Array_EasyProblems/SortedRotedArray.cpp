@@ -1,3 +1,21 @@
+/*
+LeetCode 1752: Check if Array Is Sorted and Rotated
+
+Time Complexity:
+O(n)
+- We traverse the array once.
+- Each element is compared with the next element (circularly).
+
+Space Complexity:
+O(1)
+- Only constant extra variables are used.
+- No additional data structures.
+
+Explanation:
+A sorted and rotated array can have at most one place
+where nums[i] > nums[i+1] when viewed circularly.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
