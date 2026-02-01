@@ -1,46 +1,53 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
-vector<int> unionarray(vector<int>&a ,vector<int>&b)
-{
-    unordered_set<int>s;//removes duplicates 
+vector<int> findUnionSorted(const vector<int>& a, const vector<int>& b) {
+    int n = a.size();
+    int m = b.size();
+    int i = 0, j = 0;
+    vector<int> unionRes;
 
-    for(int x:a)
-    {
-        s.insert(x);
+    while (i < n && j < m) {
+        // Pick the smaller element to maintain sorted order
+        if (a[i] <= b[j]) {
+            // Only add if it's the first element or not a duplicate of the last added
+            if (unionRes.empty() || unionRes.back() != a[i]) {
+                unionRes.push_back(a[i]);
+            }
+            // Move both pointers if elements are equal to skip redundant checks
+            if (a[i] == b[j]) j++;
+            i++;
+        } else {
+            if (unionRes.empty() || unionRes.back() != b[j]) {
+                unionRes.push_back(b[j]);
+            }
+            j++;
+        }
     }
-    for(int x:b)
-    {
-        s.insert(x);
+
+    // Add remaining elements from array 'a'
+    while (i < n) {
+        if (unionRes.back() != a[i]) unionRes.push_back(a[i]);
+        i++;
     }
 
-    //converting set into vector.
+    // Add remaining elements from array 'b'
+    while (j < m) {
+        if (unionRes.back() != b[j]) unionRes.push_back(b[j]);
+        j++;
+    }
 
-    vector<int>res(s.begin(),s.end());
-
-    //sorting the vector
-
-    sort(res.begin(),res.end());
-
-
-  return res;
-
-
+    return unionRes;
 }
 
+int main() {
+    vector<int> a = {1, 1, 2, 2, 3, 4};
+    vector<int> b = {2, 2, 3, 4, 5, 6};
 
-int main()
-{
+    vector<int> result = findUnionSorted(a, b);
 
-    vector<int>a={1,1,2,2,3,4};
-    vector<int>b={2,2,3,4,5,6};
-
-    vector<int> result=unionarray(a,b);
-
-    for(int x:result)
-    {
-        cout<<x<<" ";
-    }
-
-
+    for (int x : result) cout << x << " "; // Output: 1 2 3 4 5 6
+    return 0;
 }
