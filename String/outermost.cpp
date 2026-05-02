@@ -15,7 +15,7 @@ string RemoveoutermostString(string s)
          else{
              count--;
              if(count>0)
-             result+=c;
+               result+=c;
          }
     }
     return result;
