@@ -2,8 +2,21 @@
 using namespace std;
 
 string ReverseString(string s)
-{
-    //Step 1 Reverse String
+{  //step 1 Remove extra spaces
+   //stringstream->ignore spaces and count characters.
+     string word;
+     string cleaned="";
+     stringstream ss(s);
+
+      while(ss>>word)
+      {
+          if(cleaned!="") cleaned+=" ";
+
+          cleaned+=word;
+      }
+
+      s=cleaned;
+    //Step 2 Reverse String
     reverse(s.begin(),s.end());
 
      int start=0;
