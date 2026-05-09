@@ -18,7 +18,7 @@ string LongestCommonPrefix(vector<string>& strs)
         prefix += c;
     }
  
-    return "Nothing is Common";
+    return prefix;
 
 }
 int main()
