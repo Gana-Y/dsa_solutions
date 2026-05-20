@@ -31,5 +31,6 @@
       }
       else{
         cout<<"both strings are not anagram"<<endl;
+        
       }
  }
