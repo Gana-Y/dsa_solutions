@@ -35,7 +35,7 @@ int main()
         cout<<"Yes both are Isomorphic Strings"<<endl;
     }
     else{
-        cout<<"No both are not Isomorphic"<<endl;
+        cout<<"No both are not Isomporphics"<<endl;
     }
 
 }
