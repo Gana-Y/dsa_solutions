@@ -1,4 +1,4 @@
-//Isomporphic_Strings
+//Isomporphic_Strings  Dsa solutions
 #include<bits/stdc++.h>
 using namespace std;
 bool Isomorphic(string s, string t)
